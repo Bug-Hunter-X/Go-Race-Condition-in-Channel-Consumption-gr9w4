@@ -1,0 +1,3 @@
+# Go Race Condition in Channel Consumption
+
+This repository demonstrates a subtle race condition that can occur in Go programs when consuming values from a channel concurrently. The program uses a WaitGroup to ensure all goroutines complete, but due to the unbuffered channel and the order of operations, the output is non-deterministic and can lead to unexpected behavior or deadlocks.  The solution shows how to modify the code to avoid this issue by ensuring proper synchronization.
